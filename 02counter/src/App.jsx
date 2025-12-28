@@ -12,9 +12,16 @@ function App() {
   const addValue = () => {
     // counter = counter+1
     if(counter<20){
-    setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    setCounter((prevCounter) => prevCounter+1)
+    setCounter((prevCounter) => prevCounter+1)
+    setCounter((prevCounter) => prevCounter+1)
+    setCounter((prevCounter) => prevCounter+1)
+
     console.log("clicked", counter);
     }
+
     else{
       alert('cannot increas beyond 20')
     }
@@ -25,6 +32,7 @@ function App() {
       setCounter(counter -1)
       console.log("clicked", counter);
     }
+    
     else{
       
       alert('cannot decrease below 0')
@@ -40,7 +48,7 @@ function App() {
     <button onClick={addValue}>Add value</button>
     <br/>
     <button onClick={substractValue}>substract value</button>
-    {/* <p>footer {counter}</p> */}
+    
     </>
   )
 }
